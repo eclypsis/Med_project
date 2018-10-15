@@ -51,6 +51,8 @@ EFFECT_ID BIGINT NOT NULL AUTO_INCREMENT,
 DESCRIPTION TEXT,
 PRIMARY KEY(EFFECT_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
+#VALUES
+
 
 #3. PRODUCER
 CREATE TABLE PRODUCER(
@@ -70,7 +72,13 @@ SIDE_EFFECT_ID BIGINT NOT NULL AUTO_INCREMENT,
 DESCRIPTION TEXT,
 PRIMARY KEY(SIDE_EFFECT_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
-
+#VALUES
+INSERT INTO SIDE_EFFECT(SIDE_EFFECT_ID,DESCRIPTION) VALUES
+('0520','Advate most common side effects can be flushing of the face, headache, nausea, and fast heartbeat may sometimes occur and can be lessened by giving this medication more slowly. Burning/redness/irritation at the injection site, fever, and chills may also occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.'),
+('0219','Ammonaps most common side effects can be anaemia, thrombocytopenia, leukopenia, leukocytosis and thrombocytosis.'),
+('0081','Betaferon most common side effects can be itching all over your body, swelling of your face and/or your tongue or sudden shortness of breath.'),
+('0725','Binocrit most common side effects can be pyrexia, hypertension, arthralgia, muscle spasm, dizziness and upper respiratory tract infection.'),
+('1241','Brilique most common side effects can be strokes, bleeding into the brain, fainting and short of breath.');
 #5. ACTIVE_SUBSTANCE
 CREATE TABLE ACTIVE_SUBSTANCE(
 ACTIVE_SUBSTANCE_ID BIGINT NOT NULL AUTO_INCREMENT,
@@ -79,6 +87,14 @@ ACTIVE_SUBSTANCE_NAME TEXT,
 DESCRIPTION TEXT,
 PRIMARY KEY(ACTIVE_SUBSTANCE_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
+#VALUES
+INSERT INTO ACTIVE_SUBSTANCE(ATC_KEY,ACTIVE_SUBSTANCE_NAME,DESCRIPTION) VALUES
+('B02BD02','octocog alfa','Antihemophilic Factor, Human Recombinant is the recombinant form of human antihemophilic factor (AH)) (Factor VIII) with coagulation promoting activity. Antihemophilic factor binds to factor IXa in the coagulation cascade along with calcium and phospholipid.'),
+('A16AX03','sodium phenylbutyrate','Sodium Phenylbutyrate is the sodium salt of phenylbutyrate, a derivative of the short-chain fatty acid butyrate, with potential antineoplastic activity'),
+('L03AB08','interferon beta-1b','Interferon beta binds to type I interferon receptors (IFNAR1 and IFNAR2c) which activate two Jak (Janus kinase) tyrosine kinases (Jak1 and Tyk2). These transphosphorylate themselves and phosphorylate the receptors.'),
+('B03XA01','epoetin alfa','Binding of erythropoietin to the erythropoietin receptor leads to receptor dimerization, which facilitates activation of JAK-STAT signaling pathways within the cytosol.'),
+('B01AC24','ticagrelor','icagrelor is a P2Y12 Platelet Inhibitor. The mechanism of action of ticagrelor is as a Phenylalanine Hydroxylase Activator, and P2Y12 Receptor Antagonist, and Cytochrome P450 3A4 Inhibitor, and Cytochrome P450 3A5 Inhibitor, and P-Glycoprotein Inhibitor. The physiologic effect of ticagrelor is by means of Decreased Platelet Aggregation.');
+
 
 
 #6.USER
@@ -195,3 +211,5 @@ PRIMARY KEY(DOCTOR_ID,SPECIALIZATION_ID),
 FOREIGN KEY(DOCTOR_ID)REFERENCES USER(USER_ID),
 FOREIGN KEY(SPECIALIZATION_ID)REFERENCES MD_SPECIALIZATION(SPECIALIZATION_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
+
+alter table ACTIVE_SUBSTANCE CHANGE ACTIVE_SUBSTANCE_KEY ATC_KEY VARCHAR(100) NOT NULL UNIQUE;
