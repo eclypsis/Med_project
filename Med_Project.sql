@@ -73,16 +73,18 @@ DESCRIPTION TEXT,
 PRIMARY KEY(SIDE_EFFECT_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
 #VALUES
-INSERT INTO SIDE_EFFECT(SIDE_EFFECT_ID,DESCRIPTION) VALUES
-('0520','Advate most common side effects can be flushing of the face, headache, nausea, and fast heartbeat may sometimes occur and can be lessened by giving this medication more slowly. Burning/redness/irritation at the injection site, fever, and chills may also occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.'),
-('0219','Ammonaps most common side effects can be anaemia, thrombocytopenia, leukopenia, leukocytosis and thrombocytosis.'),
-('0081','Betaferon most common side effects can be itching all over your body, swelling of your face and/or your tongue or sudden shortness of breath.'),
-('0725','Binocrit most common side effects can be pyrexia, hypertension, arthralgia, muscle spasm, dizziness and upper respiratory tract infection.'),
-('1241','Brilique most common side effects can be strokes, bleeding into the brain, fainting and short of breath.');
+INSERT INTO SIDE_EFFECT(DESCRIPTION) VALUES
+('Advate most common side effects can be flushing of the face, headache, nausea, and fast heartbeat may sometimes occur and can be lessened by giving this medication more slowly. Burning/redness/irritation at the injection site, fever, and chills may also occur. If any of these effects persist or worsen, tell your doctor or pharmacist promptly.'),
+('Ammonaps most common side effects can be anaemia, thrombocytopenia, leukopenia, leukocytosis and thrombocytosis.'),
+('Betaferon most common side effects can be itching all over your body, swelling of your face and/or your tongue or sudden shortness of breath.'),
+('Binocrit most common side effects can be pyrexia, hypertension, arthralgia, muscle spasm, dizziness and upper respiratory tract infection.'),
+('Brilique most common side effects can be strokes, bleeding into the brain, fainting and short of breath.');
+
+
 #5. ACTIVE_SUBSTANCE
 CREATE TABLE ACTIVE_SUBSTANCE(
 ACTIVE_SUBSTANCE_ID BIGINT NOT NULL AUTO_INCREMENT,
-ACTIVE_SUBSTANCE_KEY VARCHAR(100) NOT NULL UNIQUE,
+ATC_KEY VARCHAR(100) NOT NULL UNIQUE,
 ACTIVE_SUBSTANCE_NAME TEXT,
 DESCRIPTION TEXT,
 PRIMARY KEY(ACTIVE_SUBSTANCE_ID)
@@ -182,11 +184,11 @@ FOREIGN KEY(MEDICINE_ID)REFERENCES MEDICINE(MEDICINE_ID),
 FOREIGN KEY(SIDE_EFFECT_ID)REFERENCES SIDE_EFFECT(SIDE_EFFECT_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
 INSERT INTO MEDICINE_SIDE_EFFECT(MEDICINE_ID,SIDE_EFFECT_ID) VALUES
-(1,'0520'),
-(2,'0219'),
-(3,'0081'),
-(4,'0725'),
-(5,'1241');
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5);
 
 
 #14.PRESCRIPTION
@@ -227,4 +229,3 @@ FOREIGN KEY(DOCTOR_ID)REFERENCES USER(USER_ID),
 FOREIGN KEY(SPECIALIZATION_ID)REFERENCES MD_SPECIALIZATION(SPECIALIZATION_ID)
 )ENGINE = INNODB DEFAULT CHARSET = UTF8;
 
-alter table ACTIVE_SUBSTANCE CHANGE ACTIVE_SUBSTANCE_KEY ATC_KEY VARCHAR(100) NOT NULL UNIQUE;
