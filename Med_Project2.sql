@@ -80,6 +80,9 @@ INSERT INTO SIDE_EFFECT(DESCRIPTION) VALUES
 ('pyrexia'),('hypertension'),('arthralgia'),('muscle spasm'), ('dizziness'),('upper respiratory tract infection'),
 ('strokes'), ('bleeding into the brain'), ('fainting');
 
+SELECT * FROM SIDE_EFFECT;
+
+
 
 #5. ACTIVE_SUBSTANCE
 CREATE TABLE ACTIVE_SUBSTANCE(
@@ -95,9 +98,31 @@ INSERT INTO ACTIVE_SUBSTANCE(ATC_KEY,ACTIVE_SUBSTANCE_NAME,DESCRIPTION) VALUES
 ('A16AX03','sodium phenylbutyrate','Sodium Phenylbutyrate is the sodium salt of phenylbutyrate, a derivative of the short-chain fatty acid butyrate, with potential antineoplastic activity'),
 ('L03AB08','interferon beta-1b','Interferon beta binds to type I interferon receptors (IFNAR1 and IFNAR2c) which activate two Jak (Janus kinase) tyrosine kinases (Jak1 and Tyk2). These transphosphorylate themselves and phosphorylate the receptors.'),
 ('B03XA01','epoetin alfa','Binding of erythropoietin to the erythropoietin receptor leads to receptor dimerization, which facilitates activation of JAK-STAT signaling pathways within the cytosol.'),
-('B01AC24','ticagrelor','icagrelor is a P2Y12 Platelet Inhibitor. The mechanism of action of ticagrelor is as a Phenylalanine Hydroxylase Activator, and P2Y12 Receptor Antagonist, and Cytochrome P450 3A4 Inhibitor, and Cytochrome P450 3A5 Inhibitor, and P-Glycoprotein Inhibitor. The physiologic effect of ticagrelor is by means of Decreased Platelet Aggregation.');
+('B01AC24','ticagrelor','icagrelor is a P2Y12 Platelet Inhibitor. The mechanism of action of ticagrelor is as a Phenylalanine Hydroxylase Activator, and P2Y12 Receptor Antagonist, and Cytochrome P450 3A4 Inhibitor, and Cytochrome P450 3A5 Inhibitor, and P-Glycoprotein Inhibitor. The physiologic effect of ticagrelor is by means of Decreased Platelet Aggregation.'),
+('L01DB','doxorubicin hydrochloride','Doxorubicin Hydrochloride is the hydrochloride salt of doxorubicin, an anthracycline antibiotic with antineoplastic activity. Doxorubicin, isolated from the bacterium Streptomyces peucetius var. caesius, is the hydroxylated congener of daunorubicin.'),
+('J07BB01','influenza vaccine H1N1 whole virion, inactivated, prepared in cell culture','The Comparative Toxicogenomics Database (CTD) promotes understanding about the effects of environmental chemicals.'),
+('B01AD12','human protein C','Protein C.'),
+('C09DA04','irbesartan / hydrochlorothiazide','Hydrochlorothiazide mixture with Irbesartan; 448264-66-2; Karvezide; CoAprovel; Irbesartan-hydrochlorothiazide; Irbesartan Hydrochlorothiazide BMS.'),
+('A07AA12','fidaxomicin','Fidaxomicin is a narrow-spectrum, 18-membered macrolide antibiotic isolated from the actinomycete Dactylosporangium aurantiacum subsp. hamdenensis with potential antibacterial activity. '),
+('J07AE01','recombinant cholera toxin B subunit / vibrio cholerae 01','The cholera toxin B subunit ameliorates experimentally induced colitis in mice. In humans, cholera toxin B subunit has never been tested in the treatment of Crohns disease CD.'),
+('J05AH02','oseltamivir','Oseltamivir is an acetamido cyclohexene that is a structural homolog of SIALIC ACID and inhibits NEURAMINIDASE.'),
+('B01AF02','apixaban','Apixaban is an orally active inhibitor of coagulation factor Xa with anticoagulant activity. Apixaban directly inhibits factor Xa, thereby interfering with the conversion of prothrombin to thrombin and preventing formation of cross-linked fibrin clots.'),
+('J05AF09','emtricitabine','Emtricitabine is a synthetic fluoro derivative of thiacytidine with potent antiviral activity. Emtricitabine is phosphorylated to form emtricitabine 5-triphosphate within the cell. This metabolite inhibits the activity of human immunodeficiency virus (HIV) reverse transcriptase both by competing with the natural substrate deoxycytidine 5-triphosphate and by incorporation into viral DNA causing a termination of DNA chain elongation (due to the lack of the essential 3-OH group).'),
+('N06DA03','rivastigmine','Rivastigmine is a carbamate-derived reversible CHOLINESTERASE INHIBITOR that is selective for the CENTRAL NERVOUS SYSTEM and is used for the treatment of DEMENTIA in ALZHEIMER DISEASE and PARKINSON DISEASE.'),
+('V03AC02','deferiprone','Deferiprone is an orally bioavailable bidentate ligand with iron chelating activity. Deferiprone binds to iron in a 3:1 (ligand:iron) molar ratio. By binding to iron, deferiprone is able to remove excess iron from the body.'),
+('B06AC02','icatibant','Icatibant (Firazyr) is a synthetic peptidomimetic drug consisting of ten amino acids, and acts as an effective and specific antagonist of bradykinin B2 receptors. It has been approved in the EU for use in hereditary angioedema, and is under investigation for a number of other conditions in which bradykinin is thought to play a significant role. Icatibant currently has orphan drug status in the United States and FDA approved on August 25, 2011.'),
+('M05BB03','alendronic acid / colecalciferol','Alendronic Acid/Colecalciferol is indicated for the treatment of postmenopausal osteoporosis in women at risk of vitamin D insufficiency. Alendronic Acid/Colecalciferol reduces the risk of vertebral and hip fractures.'),
+('A10BD19','empagliflozin / linagliptin','Empagliflozin is a sodium glucose co-transporter-2 (SGLT-2) inhibitor indicated as an adjunct to diet and exercise to improve glycemic control in adult patients with type 2 diabetes. SGLT2 co-transporters are responsible for reabsorption of glucose from the glomerular filtrate in the kidney. The glucuretic effect resulting from SGLT2 inhibition reduces renal absorption and lowers the renal threshold for glucose, therefore resulting in increased glucose excretion. Additionally, it contributes to reduced hyperglycaemia and also assists weight loss and blood pressure reduction.'),
+('B02BX','emicizumab','Hemlibra is indicated for routine prophylaxis of bleeding episodes in patients with haemophilia A with factor VIII inhibitors.'),
+('J02AC04','posaconazole','Posaconazole is a broad-spectrum, second generation, triazole compound with antifungal activity. Posaconazole strongly inhibits 14-alpha demethylase, a cytochrome P450-dependent enzyme. Inhibition of 14-alpha-demethylase prevents the conversion of lanosterol to ergosterol, an important component of the fungal cell wall. Inhibition of ergosterol synthesis changes the fungal cell membrane composition and integrity, alters membrane permeability and eventually leads to fungal cell lysis.'),
+('S01BC10','nepafenac','Nepafenac is a Nonsteroidal Anti-inflammatory Drug. The mechanism of action of nepafenac is as a Cyclooxygenase Inhibitor. The chemical classification of nepafenac is Nonsteroidal Anti-inflammatory Compounds.'),
+('N04BC09','rotigotine','Rotigotine is a non-ergot dopamine receptor agonist used in the therapy of Parkinson disease and restless leg syndrome. Administered as a once daily transdermal patch, rotigotine has not been associated with serum enzyme elevations during treatment or with episodes of clinically apparent liver injury.'),
+('R03DX09','mepolizumab','Nucala is indicated as an add-on treatment for severe refractory eosinophilic asthma in adults, adolescents and children aged 6 years and older'),
+('L04AB02','infliximab','Flixabi, in combination with methotrexate, is indicated for the reduction of signs and symptoms as well as the improvement in physical function'),
+('C09CA07','telmisartan','Telmisartan is a benzimidazole derivative and a non-peptide angiotensin II receptor antagonist with antihypertensive property. Telmisartan selectively antagonizes angiotensin II binding to the AT1 subtype receptor, located in vascular smooth muscle and adrenal gland. The antagonism results in vasodilation and inhibits the angiotensin II-mediated aldosterone production, which in turn leading to a decrease in sodium and water as well as an increase in potassium excretion leading to a subsequent reduction in blood pressure.'),
+('A06AX05','prucalopride succinate','Prucalopride is contraindicated where there is hypersensitivity to the active substance or to any of the excipients, renal impairment requiring dialysis, intestinal perforation or obstruction due to structural or functional disorder of the gut wall, obstructive ileus, severe inflammatory conditions of the intestinal tract, such as Crohns disease, and ulcerative colitis and toxic megacolon/megarectum.'),
+('A10BJ02','liraglutide','Liraglutide is a long-acting, fatty acylated glucagon-like peptide-1 (GLP-1) analog administered subcutaneously, with antihyperglycemic activity. Liraglutides prolonged action and half-life of 11-15 hours are attributed to the attachment of the fatty acid palmitic acid to GLP-1 that reversibly binds to albumin. Albumin binding protects liraglutide from immediate degradation and elimination and causes GLP-1 to be released from abumin in a slow and consistent manner. This agent may cause thyroid C-cell tumors and increases the risk of acute pancreatitis.');
 
-SELECT * FROM ACTIVE_SUBSTANCE; 
 
 #6.USER
 CREATE TABLE USER(
@@ -153,7 +178,30 @@ INSERT INTO MEDICINE_ACTIVE_SUBSTANCE(MEDICINE_ID,ACTIVE_SUBSTANCE_ID) VALUES
 (2,2),
 (3,3),
 (4,4),
-(5,5);
+(5,5),
+(6,6),
+(7,7),
+(8,8),
+(9,9),
+(10,10),
+(11,11),
+(12,12),
+(13,13),
+(14,14),
+(15,15),
+(16,16),
+(17,17),
+(18,18),
+(19,19),
+(20,20),
+(21,21),
+(22,22),
+(23,23),
+(24,24),
+(25,25),
+(26,26),
+(27,27),
+(28,28);
 
 
 #10. MEDICINE_PRODUCER
